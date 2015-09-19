@@ -34,3 +34,5 @@ var conf = multiconf.NewMulticonf(
 	"{{.Conf}}/myapp.conf",
 )
 ```
+
+[API Documentation](http://godoc.org/github.com/christopherobin/multiconf)

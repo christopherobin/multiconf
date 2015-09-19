@@ -56,6 +56,9 @@ func (conf *Multiconf) Load() error {
 		return err
 	}
 
+	// reset root
+	conf.Root = make(map[string]interface{})
+
 	for idx, config := range conf.Files {
 		fileNameTmpl, err := template.New(fmt.Sprintf("multiconf.%d", idx)).Parse(config)
 		if err != nil {
